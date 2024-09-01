@@ -4,6 +4,8 @@ import bg from '../images/Section1/bg.png'
 import telegram_icon from '../images/Section1/telegram.png'
 import twitter_icon from '../images/Section1/twitter.png'
 import dex_icon from '../images/Section1/dex.png'
+import coingecko_icon from '../images/Section1/coingecko.png'
+import sunswap_icon from '../images/Section1/sunswap.jpeg'
 import dextools_icon from '../images/Section1/dextools.png'
 import trippy from '../images/Section1/bg.png'
 import banner from '../images/Section1/banner.gif'
@@ -11,10 +13,12 @@ import banner from '../images/Section1/banner.gif'
 const Section1=()=>{
 
     const socialIcons= useRef([
-        { src: telegram_icon, link: "https://t.me/hpepecto" },
-        { src: twitter_icon, link: "https://x.com/hpepecto" },
-        { src:dex_icon, link: "https://dexscreener.com/solana/kb6eidtdewxwpnltbfkc3t9c7a6xlfvvqhwbatseeb5" },
-        { src: dextools_icon, link: "https://www.dextools.io/app/en/solana/pair-explorer/KB6EiDtdewXwpNLTBfKC3t9C7A6XLFvvQHwBaTSeeb5?t=1723830652615" }
+        { src: telegram_icon, link: "https://t.me/CocaineBearTRX" },
+        { src: twitter_icon, link: "https://x.com/cbeartrx" },
+        { src:dex_icon, link: "" },
+        { src: dextools_icon, link: "" },
+        { src:coingecko_icon, link: "" },
+        { src: sunswap_icon, link: "" }
     ]).current;
     const [currentbg,setCurrentBg]=useState(0)
     const interval=useRef<any>()

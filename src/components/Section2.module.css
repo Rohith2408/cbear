@@ -9,6 +9,7 @@
     background-image: url("../images/mainbg.png");
     background-size: cover;
     position: relative;
+    overflow: hidden;
 }
   
   .subwrapper{
@@ -30,6 +31,17 @@
     height:100%;
     box-sizing: border-box;
     flex-direction: column;
+    padding-top:50px;
+  }
+
+  .banner{
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    left: 0;
+    object-fit:cover;
+    z-index: 1;
+    top: 0%;
   }
 
   .titlewrapper{
