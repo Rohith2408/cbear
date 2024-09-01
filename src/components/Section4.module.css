@@ -1,0 +1,392 @@
+.mainwrapper{
+    width:100vw;
+    height: 100vh;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .subwrapper{
+    width:100%;
+    height:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    position: relative;
+  }
+
+  .banner{
+    position: absolute;
+    width: 100%;
+    height:auto;
+    left: 0;
+    object-fit:cover;
+    z-index: 1;
+  }
+
+  .bg{
+    position: absolute;
+    width: 100vw;
+    height:100%;
+    top: 0;
+    left: 0;
+    object-fit:cover;
+    /* content: url("../images/Section1/trippy2.jpg"); */
+    animation: scaleAnimation 0.3s infinite ease-in-out;
+  }
+
+  @keyframes scaleAnimation {
+    0%{
+      transform: scale(1);
+      
+    }
+    80% {
+      transform: scale(1.05);
+    }
+    100%{
+        transform: scale(1);
+    }
+  }
+
+  .boxWrapper{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: row;
+    
+  }
+
+  .box{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-image: url("../images/Section2/box.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .boxForeground{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    /* background-color: #53A646; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    /* border: 3px solid black; */
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .boxBackground{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* background-color: #3F8236; */
+  }
+
+  .textarea{
+    width:100%;
+    height: 90%;
+    box-sizing: border-box;
+    background-color: transparent;
+    border: none;
+    word-wrap: break-word;   
+    overflow: auto;
+    resize: none;
+    max-width: 90%;
+    font-family: var(--font-bahiana);
+    color: white;
+    transform: rotate(1deg);
+  }
+
+  .hex{
+    margin: 0;
+    color: white;
+    background-color:transparent;
+    border:none;
+    word-wrap: break-word;   
+    overflow-wrap: break-word;
+    text-align: start;
+    transform: rotate(-1deg);
+  }
+
+  .caTitle{
+    margin: 0;
+    font-family:var(--font-barriecito);
+    color: white;
+    text-align: start;
+    z-index: 1;
+  }
+
+  .title{
+    /* position: absolute;
+    top: 0; */
+    margin: 0;
+    font-family:var(--font-barriecito);
+    color: white;
+    text-align: center;
+    
+  }
+
+  .titleWrapper{
+    display:flex;
+    flex-direction: row;
+    position: absolute;
+    transform: translateY(-150%);
+    gap: 20px;
+    background-color: black;
+  }
+
+  .copyWrapper{
+    margin: 0;
+    background-color: transparent;
+    border: none;
+  }
+
+  .bg1,.bg2{
+    height: auto;
+    object-fit: contain;
+    position: absolute;
+    bottom: 0;
+  }
+
+  .bg1{
+    left: 0;
+  }
+
+  .bg2{
+    right: 0;
+  }
+
+  @media screen and (max-width:500px) {
+
+    .mainwrapper{
+        max-height: 500px;
+        min-height: 450px;
+        min-width: 320px;
+    }
+
+    .subwrapper{
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .boxWrapper{
+        width: 300px;
+        height: 400px;
+        gap: 100px;
+        flex-direction: column;
+    }
+
+    .boxBackground{
+        left: 10px;
+        top: 10px;
+        transform: rotate(0.5deg);
+    }
+
+    .hex{
+        font-size: 16px;
+    }
+    .caTitle{
+        font-size: 22px;
+    }
+
+    .textarea{
+        font-size: 18px;
+    }
+
+    .copyIcon{
+        width: 20px;
+        height: auto;
+    }
+
+    .bg1,.bg2{
+        width: 150px;
+    }
+
+    .banner{
+        bottom: -10%;
+    }
+    
+  }
+
+  @media screen and (min-width:501px) and (max-width:1023px) {
+
+    .mainwrapper{
+        max-height: 650px;
+        min-height: 600px;
+    }
+
+    .subwrapper{
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .boxWrapper{
+        width: 400px;
+        height: 550px;
+        gap: 150px;
+        flex-direction: column;
+    }
+
+    .boxBackground{
+        left: 15px;
+        top: 15px;
+        transform: rotate(0.5deg);
+    }
+
+    .hex{
+        font-size: 18px;
+    }
+    .caTitle{
+        font-size: 26px;
+    }
+
+    .textarea{
+        font-size: 20px;
+    }
+
+    .copyIcon{
+        width: 30px;
+        height: auto;
+    }
+
+    .bg1,.bg2{
+        width: 200px;
+    }
+
+    .banner{
+        bottom: -10%;
+    }
+    
+  }
+
+  @media screen and (min-width:1024px) and (max-width:1920px) {
+
+    .mainwrapper{
+        max-height: 750px;
+        min-height: 700px;
+    }
+
+    .subwrapper{
+        max-width: 1440px;
+        padding: 50px;
+        flex-direction: row;
+    }
+
+    .boxWrapper{
+        width: 900px;
+        height: 500px;
+        gap: 75px;
+    }
+
+    .boxBackground{
+        left: 25px;
+        top: 25px;
+        transform: rotate(0.5deg);
+    }
+
+    .textarea{
+        padding: 20px;
+        /* width: 500px;
+        height: 150px; */
+    }
+
+    .hex{
+        font-size: 20px;
+    }
+    .caTitle{
+        font-size: 30px;
+    }
+
+    .textarea{
+        font-size: 22px;
+    }
+
+    .copyIcon{
+        width: 40px;
+        height: auto;
+    }
+
+    .bg1,.bg2{
+        width: 300px;
+    }
+
+    .banner{
+        bottom: -10%;
+    }
+  }
+
+  @media screen and (min-width:1921px){
+
+    .mainwrapper{
+        max-height: 1150px;
+        min-height: 1100px;
+    }
+
+    .subwrapper{
+        max-width: 2200px;
+        padding: 100px;
+        flex-direction: row;
+    }
+
+    .boxWrapper{
+        width: 1800px;
+        height: 700px;
+        gap: 200px;
+    }
+
+    .boxBackground{
+        left: 35px;
+        top: 35px;
+        transform: rotate(1deg);
+    }
+
+    /* .textarea{
+        padding: 20px;
+        width: 700px;
+        height: 150px;
+    } */
+
+    .hex{
+        font-size: 34px;
+    }
+
+    .textarea{
+        font-size: 36px;
+    }
+
+    .caTitle{
+        font-size: 40px;
+        margin: 10px;
+    }
+
+    .copyIcon{
+        width: 50px;
+        height: auto;
+    }
+
+    .bg1,.bg2{
+        width: 400px;
+    }
+
+    .title{
+        font-size: 30px;
+    }
+
+    .banner{
+        bottom: -10%;
+    }
+
+  }
+
