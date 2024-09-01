@@ -7,8 +7,8 @@ import dex_icon from '../images/Section1/dex.png'
 import coingecko_icon from '../images/Section1/coingecko.png'
 import sunswap_icon from '../images/Section1/sunswap.jpeg'
 import dextools_icon from '../images/Section1/dextools.png'
-import trippy from '../images/Section1/bg.png'
-import banner from '../images/Section1/banner.gif'
+import copy from '../images/Section1/copy.png'
+
 
 const Section1=()=>{
 
@@ -24,13 +24,7 @@ const Section1=()=>{
     const interval=useRef<any>()
 
     useEffect(()=>{
-        // if(interval.current)
-        // {
-        //     clearInterval(interval.current)
-        // }
-        // interval.current=setInterval(()=>{
-        //     setCurrentBg(currentbg==6?0:currentbg+1)
-        // },100)
+
     },[currentbg])
 
     return(
@@ -42,9 +36,9 @@ const Section1=()=>{
                         <img className={styles.titleimg}></img>
                         <p className={styles.subtitle}>The highest bear on Tron</p>
                         <div className={styles.cawrapper}>
-                            <p className={styles.caHeading}></p>
+                            <p className={styles.caHeading}>CA: </p>
                             <p className={styles.ca}></p>
-                            <img className={styles.copyicon}></img>
+                            <img src={copy} className={styles.copyicon}></img>
                         </div>
                         <div className={styles.socialWrapper}>
                         {

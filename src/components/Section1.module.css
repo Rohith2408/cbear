@@ -50,7 +50,16 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+    gap: 10px;
   }
+
+  .caHeading,.ca{
+    margin: 0;
+    color: white;
+    font-family: var(--font-bahiana);
+    padding: 10px;
+  }
+
 
   .titleimg{
     content: url("../images/Section1/text.png");
@@ -65,6 +74,15 @@
     padding: 10px;
     box-sizing: border-box;
     height: 100%;
+  }
+
+  .cawrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    border-radius: 100px;
   }
 
   .image{
@@ -344,7 +362,7 @@
     }
 
     .caHeading,.ca{
-        font-size: 20px;
+        font-size: 50px;
     }
 
     .copyicon{
