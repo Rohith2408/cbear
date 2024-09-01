@@ -8,10 +8,9 @@ import dextools_icon from '../images/Section1/dextools.png'
 import trippy from '../images/Section1/bg.png'
 import banner from '../images/Section1/banner.gif'
 
-
 const Section1=()=>{
 
-    const socialIcons = useRef([
+    const socialIcons= useRef([
         { src: telegram_icon, link: "https://t.me/hpepecto" },
         { src: twitter_icon, link: "https://x.com/hpepecto" },
         { src:dex_icon, link: "https://dexscreener.com/solana/kb6eidtdewxwpnltbfkc3t9c7a6xlfvvqhwbatseeb5" },
@@ -21,25 +20,28 @@ const Section1=()=>{
     const interval=useRef<any>()
 
     useEffect(()=>{
-        if(interval.current)
-        {
-            clearInterval(interval.current)
-        }
-        interval.current=setInterval(()=>{
-            setCurrentBg(currentbg==6?0:currentbg+1)
-        },100)
+        // if(interval.current)
+        // {
+        //     clearInterval(interval.current)
+        // }
+        // interval.current=setInterval(()=>{
+        //     setCurrentBg(currentbg==6?0:currentbg+1)
+        // },100)
     },[currentbg])
 
     return(
         <section className={styles.mainwrapper} id="section2" data-scroll-to="section2">
-            <img className={styles.bg} src={trippy}/>
+            <img className={styles.bg}></img>
             <div className={styles.subwrapper}>
-                {/* <img className={styles.banner} src={banner}/> */}
-                <div className={styles.textWrapper}>
-                    <div className={styles.textSubWrapper}>
-                        <p className={styles.title}>cbear</p>
-                        <p className={styles.text}>The highest bear on TronInclude CA in Home only</p>
-                        <div className={styles.ca_wrapper}><input className={styles.ca}></input></div>
+                <div className={styles.body}>
+                    <div className={styles.textwrapper}>
+                        <img className={styles.titleimg}></img>
+                        <p className={styles.subtitle}>The highest bear on Tron</p>
+                        <div className={styles.cawrapper}>
+                            <p className={styles.caHeading}></p>
+                            <p className={styles.ca}></p>
+                            <img className={styles.copyicon}></img>
+                        </div>
                         <div className={styles.socialWrapper}>
                         {
                             socialIcons.map((icon) => (
@@ -54,9 +56,9 @@ const Section1=()=>{
                             ))}
                         </div>
                     </div>
-                </div>
-                <div className={styles.imageWrapper}>
-                    <img className={styles.image}></img>
+                    <div className={styles.imgwrapper}>
+                        <img className={styles.image}></img>
+                    </div>
                 </div>
             </div>
         </section>

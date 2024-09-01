@@ -5,10 +5,11 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* background-color:#46A439; */
-    background-size: cover;
     background-repeat:no-repeat;
-  }
+    /* background-image: url("../images/Section1/bg.png"); */
+    background-size: cover;
+    position: relative;
+}
   
   .subwrapper{
     width:100%;
@@ -18,87 +19,8 @@
     align-items: center;
     box-sizing: border-box;
     position: relative;
-    /* background-image: url('../images/Section1/trippy1.png');
-    background-size: cover;
-    background-repeat:no-repeat; */
-  }
-
-  .bg{
-    position: absolute;
-    width: 100vw;
-    height:100%;
-    top: 0;
-    left: 0;
-    object-fit:cover;
-    z-index: -1;
-    filter: blur(10px);
-  }
-
-  .banner{
-    position: absolute;
-    width: 100%;
-    height:auto;
-    left: 0;
-    object-fit:cover;
-    z-index: 1;
-  }
-
-  .ca_wrapper{
-    display: flex;
-    flex-direction: row;
-    padding: 10;
-    background-color: black;
-  }
-
-  .ca{
-    color: white;
-    font-family: var(--font-bahiana); 
-  }
-
-  .textWrapper{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    box-sizing: border-box;
-    align-items:center;
-  }
-
-  .textSubWrapper{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    box-sizing: border-box;
-    align-items:flex-start;
-  }
-
-  .imageWrapper{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    box-sizing: border-box;
-    align-items:center;
-  }
-
-  .title{
-    margin: 0;
-    color: #980000;
-    -webkit-text-stroke:4px black;
-    font-family: var(--font-thorletto);
-    font-weight: 700;
-  }
-
-  .text{
-    margin: 0;
-    color: white;
-    font-family: var(--font-bahiana);
-    font-weight: 900;
-    max-width: 95%;
-    background-color: black;
-  }
-
-  .image{
-    height: auto;
-    object-fit: contain;
+    padding:10px;
+    
   }
 
   .socialWrapper{
@@ -113,48 +35,105 @@
     height: auto;
   }
 
+  .body{
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    height:100%;
+    box-sizing: border-box;
+  }
+
+  .textwrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .titleimg{
+    content: url("../images/Section1/text.png");
+    object-fit: contain;
+  }
+
+  .imgwrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+    height: 100%;
+  }
+
+  .image{
+    object-fit: cover;
+    content: url("../images/Section1/image.png");
+    border-color: black;
+  }
+
+  .bg{
+    object-fit: contain;
+    width: 100%;
+    position: absolute;
+    content: url("../images/Section1/bg.png");
+  }
+
+  .subtitle{
+    font-family: var(--font-bahiana);
+    color: white;
+    margin: 0px;
+  }
+
   @media screen and (max-width:500px) {
 
     .mainwrapper{
-        max-height: 650px;
-        min-height: 600px;
-        min-width: 320px;
-        /* background-image: url("../images/Section1/trippy1.png"); */
+        max-height: 600px;
+        min-height: 550px;
     }
 
-    .subwrapper{
+    .body{
+        padding: 50px;
         flex-direction: column;
-        gap: 30px;
-        
     }
 
-    .textWrapper{
-        width:100%;
+    .textwrapper{
+        width: 100%;
+        gap: 5;
         align-items:center;
     }
 
-    .textSubWrapper{
-        width:70%;
-        gap: 15px;
-        align-items: center;
+    .titleimg{
+        width: 250px;
     }
 
-    .title{
-        height: 170px;
-        font-size: 70px;
-        text-align: center;
+    .subtitle{
+        font-size: 30px;
     }
 
-    .text{
-        font-size: 28px;
-        line-height: 26px;
-        /* max-width: 75%; */
-        text-align: center;
+    .cawrapper{
+        width: 90%;
     }
 
+    .caHeading,.ca{
+        font-size: 20px;
+    }
+
+    .copyicon{
+        width: 20px;
+    }
+
+    .imgwrapper{
+        width: 100%;
+    }
+    
     .image{
-        content: url("../images/Section1/bg2.png");
         width: 300px;
+        border-width: 10px;
+        height: 100%;
+    }
+
+    .bg{
+        filter: blur(10px);
     }
 
     .socialWrapper{
@@ -166,10 +145,6 @@
         border-radius: 100px;
     }
 
-    .banner{
-        bottom: -2%;
-    }
-
   }
 
   @media screen and (min-width:501px) and (max-width:1023px) {
@@ -177,102 +152,55 @@
     .mainwrapper{
         max-height: 800px;
         min-height: 750px;
-        /* background-image: url("../images/Section1/trippy1.png"); */
     }
 
     .subwrapper{
+        max-width: 2200px;
         flex-direction: column;
-        gap: 30px;
-        
     }
 
-    .textWrapper{
-        width:100%;
+    .body{
+        padding: 100px;
+        flex-direction: column;
+    }
+
+    .textwrapper{
+        width: 100%;
+        gap: 5;
         align-items:center;
     }
 
-    .textSubWrapper{
-        width:70%;
-        gap: 20px;
-        align-items: center;
+    .titleimg{
+        width: 350px;
     }
 
-    .title{
-        height: 240px;
-        font-size: 104px;
-        text-align: center;
-    }
-
-    .text{
+    .subtitle{
         font-size: 40px;
-        line-height: 40px;
-        /* max-width: 75%; */
-        text-align: center;
     }
 
+    .cawrapper{
+        width: 90%;
+    }
+
+    .caHeading,.ca{
+        font-size: 20px;
+    }
+
+    .copyicon{
+        width: 20px;
+    }
+
+    .imgwrapper{
+        width: 100%;
+    }
+    
     .image{
-        content: url("../images/Section1/bg2.png");
-        width: 450px;
+        width: 500px;
+        border-width: 10px;
     }
 
-    .socialWrapper{
-        gap: 20px;
-    }
-
-    .socialicons{
-        width: 40px;
-        border-radius: 100px;
-    }
-
-    .banner{
-        bottom: -4%;
-    }
-  }
-
-  @media screen and (min-width:1024px) and (max-width:1920px) {
-
-    .mainwrapper{
-        max-height: 1080px;
-        min-height: 1000px;
-        /* background-image: url("../images/Section1/trippy1.png"); */
-    }
-
-    .subwrapper{
-        /* max-width: 1440px; */
-        padding: 50px;
-        flex-direction: row;
-        
-    }
-
-    .textWrapper{
-        width: 50%;
-    }
-
-    .textSubWrapper{
-        width:80%;
-        gap: 15px;
-    }
-
-    .imageWrapper{
-        width: 40%;
-    }
-
-    .title{
-        height:250px;
-        font-size:114px;
-        text-align: start;
-    }
-
-    .text{
-        font-size: 54px;
-        line-height:48px;
-        /* max-width: 75%; */
-        text-align: start;
-    }
-
-    .image{
-        content: url("../images/Section1/bg2.png");
-        width: 550px;
+    .bg{
+        filter: blur(10px);
     }
 
     .socialWrapper{
@@ -284,9 +212,73 @@
         border-radius: 100px;
     }
 
-    .banner{
-        bottom: -7%;
+  }
+
+  @media screen and (min-width:1024px) and (max-width:1920px) {
+
+    .mainwrapper{
+        max-height: 1080px;
+        min-height: 1000px;
     }
+
+    .subwrapper{
+        max-width: 2200px;
+        flex-direction: column;
+    }
+
+    .body{
+        padding: 100px;
+        flex-direction: column;
+    }
+
+    .textwrapper{
+        width: 100%;
+        gap: 5;
+        align-items:center;
+    }
+
+    .titleimg{
+        width: 450px;
+    }
+
+    .subtitle{
+        font-size: 40px;
+    }
+
+    .cawrapper{
+        width: 90%;
+    }
+
+    .caHeading,.ca{
+        font-size: 20px;
+    }
+
+    .copyicon{
+        width: 20px;
+    }
+
+    .imgwrapper{
+        width: 100%;
+    }
+    
+    .image{
+        width: 700px;
+        border-width: 10px;
+    }
+
+    .bg{
+        filter: blur(10px);
+    }
+
+    .socialWrapper{
+        gap: 30px;
+    }
+
+    .socialicons{
+        width: 50px;
+        border-radius: 100px;
+    }
+
   }
 
   @media screen and (min-width:1921px){
@@ -294,45 +286,16 @@
     .mainwrapper{
         max-height: 1080px;
         min-height: 1000px;
-        /* background-image: url("../images/Section1/trippy1.png"); */
     }
 
     .subwrapper{
         max-width: 2200px;
+        flex-direction: row;
+    }
+
+    .body{
         padding: 100px;
         flex-direction: row;
-        
-    }
-
-    .textWrapper{
-        width: 50%;
-    }
-
-    .textSubWrapper{
-        width:60%;
-        gap: 36px;
-    }
-
-    .imageWrapper{
-        width: 50%;
-    }
-
-    .title{
-        height:350px;
-        font-size:156px;
-        text-align: start;
-    }
-
-    .text{
-        font-size: 54px;
-        line-height:58px;
-        /* max-width: 50%; */
-        text-align: start;
-    }
-
-    .image{
-        content: url("../images/Section1/bg2.png");
-        width: 800px;
     }
     
     .socialWrapper{
@@ -344,18 +307,43 @@
         border-radius: 100px;
     }
 
-    .banner{
-        bottom: -10%;
+    .textwrapper{
+        width: 60%;
+        gap: 5;
+        align-items: center;
     }
 
-    .ca_wrapper{
-        width:100px;
-        height: 50px;
-        border-radius: 20px;
+    .titleimg{
+        width: 500px;
     }
 
-    .ca{
-        font-size: 30px;
+    .subtitle{
+        font-size: 50px;
+    }
+
+    .cawrapper{
+        width: 90%;
+    }
+
+    .caHeading,.ca{
+        font-size: 20px;
+    }
+
+    .copyicon{
+        width: 20px;
+    }
+
+    .imgwrapper{
+        width: 60%;
+    }
+    
+    .image{
+        width: 800px;
+        border-width: 10px;
+    }
+
+    .bg{
+        filter: blur(10px);
     }
 
   }
