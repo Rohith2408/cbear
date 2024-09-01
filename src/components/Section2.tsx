@@ -1,26 +1,33 @@
 import styles from "./Section2.module.css";
 import { useEffect, useRef, useState } from "react";
 import bg from '../images/Section2/bg.png'
+import image1 from '../images/Section2/1.png'
+import image2 from '../images/Section2/2.png'
+import image3 from '../images/Section2/3.png'
+import image4 from '../images/Section2/4.png'
+import image5 from '../images/Section2/5.png'
 
 const Section2=()=>{
 
+    const images=useRef([image1,image2,image3,image4,image5,image1]).current;
+
     return(
         <section className={styles.mainwrapper} id="section2" data-scroll-to="section2">
+            <img className={styles.bg}></img>
             <div className={styles.subwrapper}>
-                <p className={styles.title}>Memes</p>
-                {/* <div className={styles.imageWrapper}>
-                    <img className={styles.image}></img>
+                <div className={styles.body}>
+                    <div className={styles.titlewrapper}>
+                        <img className={styles.titleimg}></img>
+                    </div>
+                    <div className={styles.imageswrapper}>
+
+                    {
+                        images.map((img)=>
+                        <img src={img} className={styles.image}></img>
+                        )
+                    }
+                    </div>
                 </div>
-                <div className={styles.textWrapper}>
-                    <p className={styles.title}>about</p>
-                    <p className={styles.text}>
-                        Hpepe is tired of watching everyone play hot potato with the endless derivative ShibaCumGMElonKishuTurboAss Inu coins. The Inu’s have had their day. It’s time for the most recognizable meme in the world to take his reign as king of the internet.
-                        Hpepe is here to make memecoins great again. Launched stealth with no presale, zero taxes, LP burnt and contract renounced, $HPEPE is a coin for the people, forever. 
-                    </p>
-                </div>
-                <div className={styles.imageWrapper2}>
-                    <img className={styles.image}></img>
-                </div> */}
             </div>
         </section>
     )

@@ -9,6 +9,7 @@
     /* background-image: url("../images/Section1/bg.png"); */
     background-size: cover;
     position: relative;
+    overflow: hidden;
 }
   
   .subwrapper{
@@ -66,6 +67,7 @@
   }
 
   .image{
+    height: 100%;
     object-fit: cover;
     content: url("../images/Section1/image.png");
     border-color: black;
@@ -73,7 +75,6 @@
 
   .bg{
     object-fit: contain;
-    width: 100%;
     position: absolute;
     content: url("../images/Section1/bg.png");
   }
@@ -200,6 +201,7 @@
     }
 
     .bg{
+        height: 100%;
         filter: blur(10px);
     }
 
