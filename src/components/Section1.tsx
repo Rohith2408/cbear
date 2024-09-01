@@ -22,7 +22,7 @@ const Section1=()=>{
     ]).current;
     const [currentbg,setCurrentBg]=useState(0)
     const interval=useRef<any>()
-    const ca=useRef("TPwTjAmVMPZ7T82XohYB2VojXGhoCUyX7d").current
+    const ca=useRef("TVsPbr53AaD4XBc4ps63w6RC2HtPoyNc1R").current
 
     useEffect(()=>{
 
