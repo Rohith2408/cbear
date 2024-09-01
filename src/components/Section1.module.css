@@ -131,7 +131,8 @@
     }
 
     .cawrapper{
-        width: 90%;
+        padding: 5px;
+        /* width: 90%; */
     }
 
     .caHeading,.ca{
@@ -204,7 +205,8 @@
     }
 
     .cawrapper{
-        width: 90%;
+        padding: 5px;
+        /* width: 90%; */
     }
 
     .caHeading,.ca{
@@ -277,15 +279,17 @@
     }
 
     .cawrapper{
-        width: 90%;
+        width: 50%;
+        gap: 10px;
+        padding: 10px;
     }
 
     .caHeading,.ca{
-        font-size: 20px;
+        font-size: 30px;
     }
 
     .copyicon{
-        width: 20px;
+        width: 30px;
     }
 
     .imgwrapper{
@@ -358,7 +362,8 @@
     }
 
     .cawrapper{
-        width: 90%;
+        padding: 10px;
+        gap: 10px;
     }
 
     .caHeading,.ca{
@@ -366,7 +371,7 @@
     }
 
     .copyicon{
-        width: 20px;
+        width: 40px;
     }
 
     .imgwrapper{

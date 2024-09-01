@@ -22,6 +22,7 @@ const Section1=()=>{
     ]).current;
     const [currentbg,setCurrentBg]=useState(0)
     const interval=useRef<any>()
+    const ca=useRef("TPwTjAmVMPZ7T82XohYB2VojXGhoCUyX7d").current
 
     useEffect(()=>{
 
@@ -37,8 +38,8 @@ const Section1=()=>{
                         <p className={styles.subtitle}>The highest bear on Tron</p>
                         <div className={styles.cawrapper}>
                             <p className={styles.caHeading}>CA: </p>
-                            <p className={styles.ca}></p>
-                            <img src={copy} className={styles.copyicon}></img>
+                            <p className={styles.ca}>{ca}</p>
+                            <button style={{margin:0,padding:0,borderWidth:0,backgroundColor:"transparent"}} onClick={()=>{alert("CA Copied!");navigator.clipboard.writeText(ca)}}><img src={copy} className={styles.copyicon}></img></button>
                         </div>
                         <div className={styles.socialWrapper}>
                         {
